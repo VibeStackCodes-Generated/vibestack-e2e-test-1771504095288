@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
+
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: oklch(0.9885097667627705 0.0057013236147819375 84.56586728745519);
+  --color-foreground: oklch(0.2684849140702921 0.006286933207768164 34.29748037425684);
+  --color-card: oklch(0.9885097667627705 0.0057013236147819375 84.56586728745519);
+  --color-card-foreground: oklch(0.2684849140702921 0.006286933207768164 34.29748037425684);
+  --color-popover: oklch(0.9885097667627705 0.0057013236147819375 84.56586728745519);
+  --color-popover-foreground: oklch(0.2684849140702921 0.006286933207768164 34.29748037425684);
+  --color-primary: oklch(0.4697988548164049 0.14304729777283937 37.303504817950355);
+  --color-primary-foreground: oklch(1.0000000000000002 0 none);
+  --color-secondary: oklch(0.9618961560293889 0.05802697810280513 95.61744863952896);
+  --color-secondary-foreground: oklch(0.2684849140702921 0.006286933207768164 34.29748037425684);
+  --color-muted: oklch(0.982984794799235 0.015448262537721271 86.42376264707342);
+  --color-muted-foreground: oklch(0.5385097667627705 0.02 84.56586728745519);
+  --color-accent: oklch(0.6658398340949839 0.1574221808369732 58.31833510966117);
+  --color-accent-foreground: oklch(0.2684849140702921 0.006286933207768164 34.29748037425684);
+  --color-destructive: oklch(0.577 0.245 27.325);
+  --color-destructive-foreground: oklch(0.985 0 0);
+  --color-border: oklch(0.909198213750889 0.016647954230921105 79.34747199580869);
+  --color-input: oklch(0.909198213750889 0.016647954230921105 79.34747199580869);
+  --color-ring: oklch(0.4697988548164049 0.10013310844098755 37.303504817950355);
+  --radius: 0.5rem;
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body: 'Lato', sans-serif;
+  --font-sans: var(--font-body);
+}
+
+.dark {
+  --color-background: oklch(0.08850976676277045 0.015701323614781937 84.56586728745519);
+  --color-foreground: oklch(0.96 0 0);
+  --color-card: oklch(0.16850976676277052 0.015701323614781937 84.56586728745519);
+  --color-card-foreground: oklch(0.96 0 0);
+  --color-popover: oklch(0.16850976676277052 0.015701323614781937 84.56586728745519);
+  --color-popover-foreground: oklch(0.96 0 0);
+  --color-primary: oklch(0.5697988548164049 0.14304729777283937 37.303504817950355);
+  --color-primary-foreground: oklch(0.10 0 0);
+  --color-secondary: oklch(0.18 0.02 84.56586728745519);
+  --color-secondary-foreground: oklch(0.96 0 0);
+  --color-muted: oklch(0.18 0.02 84.56586728745519);
+  --color-muted-foreground: oklch(0.62 0.01 250);
+  --color-accent: oklch(0.18 0.02 84.56586728745519);
+  --color-accent-foreground: oklch(0.96 0 0);
+  --color-border: oklch(0.24 0.02 84.56586728745519);
+  --color-input: oklch(0.24 0.02 84.56586728745519);
+  --color-ring: oklch(0.4697988548164049 0.10013310844098755 37.303504817950355);
+}
+
+* { @apply border-border; }
+
+body {
+  @apply bg-background text-foreground antialiased;
+  font-family: var(--font-body);
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: var(--font-display);
+}
